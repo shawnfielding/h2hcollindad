@@ -1,7 +1,7 @@
 {
   "name": "ff",
   "version": "1.0.0",
-  "description": "Find your match",
+  "description": "Head to Head basketball for Collin and Dad",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawnfielding/peoplefinder.git"
+    "url": "git+https://github.com/shawnfielding/h2hcollindad.git"
   },
-  "author": "",
+  "author": "Shawn Fielding",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shawnfielding/peoplefinder/issues"
+    "url": "https://github.com/shawnfielding/h2hcollindad/issues"
   },
-  "homepage": "https://github.com/shawnfielding/peoplefinder#readme",
+  "homepage": "https://github.com/shawnfielding/h2hcollindad#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
