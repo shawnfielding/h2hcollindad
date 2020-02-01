@@ -1,0 +1,26 @@
+{
+  "name": "ff",
+  "version": "1.0.0",
+  "description": "Find your match",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawnfielding/peoplefinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shawnfielding/peoplefinder/issues"
+  },
+  "homepage": "https://github.com/shawnfielding/peoplefinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express.js": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}

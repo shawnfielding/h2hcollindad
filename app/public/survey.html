@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Friend Survey</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Modal result -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>Friend Finder</h1>
+        <hr>
+        <h2 class="text-center">Answer the following questions to get find your friend!</h2>
+        <br>
+        <div class="text-center">
+          <a href="/"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> </button></a>
+          <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Survey Page -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Questions</h3>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <!-- The basics -->
+                <div class="form-group">
+                  <label for="reserve-name">Name</label>
+                  <input type="text" class="form-control" id="friend-name">
+                </div>
+                <div class="form-group">
+                  <label for="photo-url">Photo URL</label>
+                  <input class="form-control" type="url" id="photo-url">
+                </div>
+            </div>
+            <!-- <div class="form-group">
+              <label class="control-label" for="gender">I am</label>
+              <div>
+                <label class="radio-inline" for="male">
+                    <input type="radio" name="gender" id="male" value="male">
+                    male
+                  </label>
+                <label class="radio-inline" for="female">
+                    <input type="radio" name="gender" id="female" value="female">
+                    female
+                  </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="preference">Looking for</label>
+              <div>
+                <label class="checkbox-inline" for="prefmen"><input type="checkbox" name="preference" id="prefmen" value="men">men</label>
+                <label class="checkbox-inline" for="prefwomen"><input type="checkbox" name="preference" id="prefwomen" value="women">women</label>
+              </div>
+            </div> -->
+
+            <div class="form-group">
+              <label class="control-label" for="q1">I am looking for my lifetime partner.</label>
+              <div>
+                <div class="radio">
+                  <label for="q1-0"><input type="radio" name="q1" id="q1-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q1-1"><input type="radio" name="q1" id="q1-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q1-2"></label><input type="radio" name="q1" id="q1-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q1-3"><input type="radio" name="q1" id="q1-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q1-4"><input type="radio" name="q1" id="q1-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q2">I am a morning person.</label>
+              <div>
+                <div class="radio">
+                  <label for="q2-0"><input type="radio" name="q2" id="q2-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q2-1"><input type="radio" name="q2" id="q2-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q2-2"></label><input type="radio" name="q2" id="q2-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q2-3"><input type="radio" name="q2" id="q2-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q2-4"><input type="radio" name="q2" id="q2-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q3">I like things in order and predictable</label>
+              <div>
+                <div class="radio">
+                  <label for="q3-0"><input type="radio" name="q3" id="q3-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q3-1"><input type="radio" name="q3" id="q3-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q3-2"></label><input type="radio" name="q3" id="q3-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q3-3"><input type="radio" name="q3" id="q3-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q3-4"><input type="radio" name="q3" id="q3-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q4">I am generally liberal.</label>
+              <div>
+                <div class="radio">
+                  <label for="q4-0"><input type="radio" name="q4" id="q4-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q4-1"><input type="radio" name="q4" id="q4-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q4-2"></label><input type="radio" name="q4" id="q4-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q4-3"><input type="radio" name="q4" id="q4-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q4-4"><input type="radio" name="q4" id="q4-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q5">I am looking for a partner in crime.</label>
+              <div>
+                <div class="radio">
+                  <label for="q5-0"><input type="radio" name="q5" id="q5-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q5-1"><input type="radio" name="q5" id="q5-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q5-2"></label><input type="radio" name="q5" id="q5-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q5-3"><input type="radio" name="q5" id="q5-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q5-4"><input type="radio" name="q5" id="q5-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q6">I need some fun luvin' daily at least.</label>
+              <div>
+                <div class="radio">
+                  <label for="q6-0"><input type="radio" name="q6" id="q6-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q6-1"><input type="radio" name="q6" id="q6-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q6-2"></label><input type="radio" name="q6" id="q6-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q6-3"><input type="radio" name="q6" id="q6-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q6-4"><input type="radio" name="q6" id="q6-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q7">I am not traditionally religious.</label>
+              <div>
+                <div class="radio">
+                  <label for="q7-0"><input type="radio" name="q7" id="q7-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q7-1"><input type="radio" name="q7" id="q7-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q7-2"></label><input type="radio" name="q7" id="q7-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q7-3"><input type="radio" name="q7" id="q7-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q7-4"><input type="radio" name="q7" id="q7-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q8">I smoke or vape.</label>
+              <div>
+                <div class="radio">
+                  <label for="q8-0"><input type="radio" name="q8" id="q8-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q8-1"><input type="radio" name="q8" id="q8-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q8-2"></label><input type="radio" name="q8" id="q8-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q8-3"><input type="radio" name="q8" id="q8-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q8-4"><input type="radio" name="q8" id="q8-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q9">My partner's wealth is important to me.</label>
+              <div>
+                <div class="radio">
+                  <label for="q9-0"><input type="radio" name="q9" id="q9-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q9-1"><input type="radio" name="q9" id="q9-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q9-2"></label><input type="radio" name="q9" id="q9-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q9-3"><input type="radio" name="q9" id="q9-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q9-4"><input type="radio" name="q9" id="q9-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="q10">I keep very healthy in my nutrition and routine.</label>
+              <div>
+                <div class="radio">
+                  <label for="q10-0"><input type="radio" name="q10" id="q10-0" value="1">extremely disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q10-1"><input type="radio" name="q10" id="q10-1" value="2">disagree</label>
+                </div>
+                <div class="radio">
+                  <label for="q10-2"></label><input type="radio" name="q10" id="q10-2" value="3" checked>neutral or n/a</label>
+                </div>
+                <div class="radio">
+                  <label for="q10-3"><input type="radio" name="q10" id="q10-3" value="4">agree</label>
+                </div>
+                <div class="radio">
+                  <label for="q10-4"><input type="radio" name="q10" id="q10-4" value="5">extremely agree</label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">All friend data</a> | <a href="https://github.com/shawnfielding/FriendFinder">GitHub Repo</a></p>
+      </div>
+    </footer>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+      var newFriend = {
+        name: $("#friend-name").val().trim(),
+        photo: $("#photo-url").val().trim(),
+        //gender: $("#gender").val(),
+        //preference: $("#preference").val(),
+        scores: [$("input[name=q1]:checked").val(), $("input[name=q2]:checked").val(), $("input[name=q3]:checked").val(), $("input[name=q4]:checked").val(), $("input[name=q5]:checked").val(),
+          $("input[name=q6]:checked").val(), $("input[name=q7]:checked").val(), $("input[name=q8]:checked").val(), $("input[name=q9]:checked").val(), $("input[name=q10]:checked").val()
+        ]
+      };
+
+      $.post("/api/friends", newFriend, function(data) {
+        $('#myModal').modal('show')
+        $(".modal-body").append("<h2>" + data.name + "</h2><br><img src ='" + data.photo + "' class='img-thumbnail'>");
+      });
+    });
+    </script>
+  </body>
+
+</html>
