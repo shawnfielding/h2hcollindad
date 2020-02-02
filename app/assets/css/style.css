@@ -1,0 +1,10 @@
+body{
+  background-image: image("../images/bballbackground.jpeg");
+  background-size: cover;
+}
+
+
+.jumbotron {
+  background-image: url("../images/bballbackground.jpeg");
+  background-size: cover;
+}
